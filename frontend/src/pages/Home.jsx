@@ -8,7 +8,8 @@ function Home() {
   const [products, setProducts] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
-    setLoggedInUser(localStorage.getItem(loggedInUser));
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    setLoggedInUser(user.name.name);
   }, []);
 
   const handleLogout = (e) => {
@@ -22,7 +23,7 @@ function Home() {
 
   const fetchProducts = async () => {
     try {
-      const url = "http://localhost:6767/products";
+      const url = "http://localhost:6767/dashboard";
       const headers = {
         headers: {
           Authorization: localStorage.getItem("token"),

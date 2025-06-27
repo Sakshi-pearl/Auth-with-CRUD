@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.use(cors());
 app.use("/auth", AuthRouter);
-app.use("/products", ProdRouter);
+app.use("/dashboard", ProdRouter);
 
 app.get("/test", (req, res) => {
   res.send("Hello tested!");

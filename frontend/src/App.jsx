@@ -9,7 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"; // ← M
 
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/dashboard",
     element: <Home />,
   },
   {
